@@ -2,7 +2,7 @@ pkgdesc="ROS - libfranka is a C++ library for Franka Emika research robots "
 url="http://wiki.ros.org/libfranka"
 
 pkgname='ros-noetic-libfranka'
-pkgver='0.9.0'
+pkgver='0.8.0'
 arch=('i686' 'x86_64' 'aarch64' 'armv7h' 'armv6h')
 pkgrel=1
 license=('Apache 2.0')
@@ -27,7 +27,7 @@ depends=(
 
 _dir="libfranka-release-upstream-$pkgver"
 source=("$pkgname-$pkgver.tar.gz::https://github.com/frankaemika/libfranka-release/archive/upstream/$pkgver.tar.gz")
-sha256sums=('afb776817e19283e68b2936224f611eba49dd7bc308dfeb567c49fa44ccdb6d1')
+sha256sums=('a110633c6864b55fe6698a88b8dc2faf73b0dd113f3ca5a5c0c5e099f3bb37eb')
 
 build() {
     # Use ROS environment variables
