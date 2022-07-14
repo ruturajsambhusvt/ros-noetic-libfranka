@@ -1,0 +1,59 @@
+From fbec4214e288d8dd941ddf6c192c9f6f9757d808 Mon Sep 17 00:00:00 2001
+From: Libor Wagner <libor.wagner@cvut.cz>
+Date: Wed, 3 Jun 2020 12:52:35 +0200
+Subject: [PATCH 1/2] Fix missing imports (#65)
+
+---
+ include/franka/control_tools.h | 1 +
+ src/control_types.cpp          | 1 +
+ 2 files changed, 2 insertions(+)
+
+diff --git a/include/franka/control_tools.h b/include/franka/control_tools.h
+index dc5017c3..0bd2c30b 100644
+--- a/include/franka/control_tools.h
++++ b/include/franka/control_tools.h
+@@ -4,6 +4,7 @@
+ 
+ #include <array>
+ #include <cmath>
++#include <string>
+ 
+ /**
+  * @file control_tools.h
+diff --git a/src/control_types.cpp b/src/control_types.cpp
+index 046062e5..0c6bd58a 100644
+--- a/src/control_types.cpp
++++ b/src/control_types.cpp
+@@ -3,6 +3,7 @@
+ #include <type_traits>
+ 
+ #include <franka/control_types.h>
++#include <stdexcept>
+ 
+ namespace franka {
+ 
+
+From 58aa7408992169f5e98d713a9de75a4248ddc647 Mon Sep 17 00:00:00 2001
+From: Simon Gabl <simon.gabl@tum.de>
+Date: Fri, 31 Jul 2020 11:50:01 +0200
+Subject: [PATCH 2/2] Sort includes.
+
+---
+ src/control_types.cpp | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/control_types.cpp b/src/control_types.cpp
+index 0c6bd58a..fd7d016d 100644
+--- a/src/control_types.cpp
++++ b/src/control_types.cpp
+@@ -1,9 +1,9 @@
+ // Copyright (c) 2017 Franka Emika GmbH
+ // Use of this source code is governed by the Apache-2.0 license, see LICENSE
++#include <stdexcept>
+ #include <type_traits>
+ 
+ #include <franka/control_types.h>
+-#include <stdexcept>
+ 
+ namespace franka {
+ 

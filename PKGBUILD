@@ -28,7 +28,7 @@ depends=(
 _dir="libfranka-release-upstream-$pkgver"
 source=("$pkgname-$pkgver.tar.gz::https://github.com/frankaemika/libfranka-release/archive/upstream/$pkgver.tar.gz"
         "include.patch::https://patch-diff.githubusercontent.com/raw/frankaemika/libfranka/pull/66.patch")
-sha256sums=('8cd70e0e468b5ee7023122b217cfe3358faddee0ba6c1d560b0dc23925be6839'
+sha256sums=('a110633c6864b55fe6698a88b8dc2faf73b0dd113f3ca5a5c0c5e099f3bb37eb'
             'SKIP')
 
 prepare() {
